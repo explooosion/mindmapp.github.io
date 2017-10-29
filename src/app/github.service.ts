@@ -5,7 +5,7 @@ import "rxjs/add/operator/map";
 @Injectable()
 export class GithubService {
 
-    url: string = "https://api.github.com/repos/Mindmapp/mmp/releases";
+    url: string = "https://api.github.com/repos/Mindmapp/mindmapp/releases/latest";
 
     constructor(private http: Http) {
     }
