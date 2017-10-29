@@ -8,7 +8,7 @@
   "scripts": {
     "start": "ng serve",
     "build": "ng build",
-    "public": "ng build --prod && ngh --message='update site to version 0.1.0'"
+    "gh-pages": "ng build --prod && ngh --message='update site to version 0.1.0'"
   },
   "private": true,
   "dependencies": {
