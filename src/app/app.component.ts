@@ -4,12 +4,13 @@ import {GithubService} from "./github.service";
 @Component({
     selector: "app-root",
     templateUrl: "app.component.html",
-    styleUrls: ["app.component.css"]
+    styleUrls: ["app.component.scss"]
 })
 export class AppComponent {
 
     github: string = "https://github.com/Mindmapp";
     title: string = "Mindmapp";
+    description: string = "Draw quickly your mind maps";
 
     releases = [{
         os: "Windows 64 bit",
@@ -22,6 +23,8 @@ export class AppComponent {
     constructor(public githubService: GithubService) {
         this.githubService.getLastRelease().then(data => {
             console.log(data);
+        }).catch(error => {
+            console.log(error.json());
         });
     }
 

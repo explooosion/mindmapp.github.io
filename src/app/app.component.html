@@ -1,17 +1,18 @@
-<div class="bgimg">
-    <div class="topleft">
+<div id="download-page">
+    <div id="topleft">
         <img src="./assets/logo.png">
     </div>
-    <div class="middle">
+    <div id="middle">
         <h1>{{ title }}</h1>
+        <p>{{ description }}</p>
         <hr>
         <a class="button" *ngFor="let release of releases" [href]="release.link" download>
-            <button>{{ release.os }}</button>
+            <button [disabled]="!release.link">{{ release.os }}</button>
         </a>
     </div>
-    <div class="bottomleft">
+    <div id="bottomleft">
         <a [href]="github" target="_blank">
-            <img class="logo" src="./assets/github.png">
+            <img src="./assets/github.png">
         </a>
     </div>
 </div>
