@@ -1,7 +1,7 @@
 {
   "name": "mindmapp-site",
   "version": "0.1.0",
-  "description": "Mindmapp site to download latest release",
+  "description": "Mindmapp site to download the latest release",
   "author": "Omar Desogus <omardesogus9@gmail.com>",
   "homepage": "https://github.com/mindmapp/mindmapp",
   "license": "MIT",
