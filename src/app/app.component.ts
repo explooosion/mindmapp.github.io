@@ -1,0 +1,28 @@
+import {Component} from "@angular/core";
+import {GithubService} from "./github.service";
+
+@Component({
+    selector: "app-root",
+    templateUrl: "app.component.html",
+    styleUrls: ["app.component.css"]
+})
+export class AppComponent {
+
+    github: string = "https://github.com/Mindmapp";
+    title: string = "Mindmapp";
+
+    releases = [{
+        os: "Windows 64 bit",
+        link: ""
+    }, {
+        os: "Linux 64 bit",
+        link: ""
+    }];
+
+    constructor(public githubService: GithubService) {
+        this.githubService.getLastRelease().then(data => {
+            console.log(data);
+        });
+    }
+
+}
