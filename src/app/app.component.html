@@ -3,12 +3,15 @@
         <img src="./assets/logo.png">
     </div>
     <div id="middle">
-        <h1>{{ title }}</h1>
-        <p>{{ description }}</p>
-        <hr>
-        <a class="button" *ngFor="let release of releases" [href]="release.link" download>
-            <button [disabled]="!release.link">{{ release.os }}</button>
-        </a>
+        <div>
+            <h1>{{ title }}</h1>
+            <img id="map" [src]="map">
+            <p>{{ description }}</p>
+            <hr>
+            <a class="button" *ngFor="let release of releases" [href]="release.link" download>
+                <button [disabled]="!release.link">{{ release.os }}</button>
+            </a>
+        </div>
     </div>
     <div id="bottomleft">
         <a [href]="github" target="_blank">

@@ -9,6 +9,9 @@ import {GithubService} from "./github.service";
 export class AppComponent {
 
     github: string = "https://github.com/Mindmapp";
+
+    map: string = "https://raw.githubusercontent.com/Mindmapp/mindmapp/master/src/assets/map.png";
+
     title: string = "Mindmapp";
     description: string = "Draw quickly your mind maps";
 
