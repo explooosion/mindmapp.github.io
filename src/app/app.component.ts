@@ -8,26 +8,26 @@ import {GithubService} from "./github.service";
 })
 export class AppComponent {
 
-    github: string = "https://github.com/Mindmapp";
-
-    map: string = "https://raw.githubusercontent.com/Mindmapp/mindmapp/master/src/assets/map.png";
+    githubLink: string = "https://github.com/Mindmapp";
+    downloadLink: string = "https://github.com/Mindmapp/mindmapp/releases/download/";
+    mapLink: string = "https://raw.githubusercontent.com/Mindmapp/mindmapp/master/src/assets/map.png";
 
     title: string = "Mindmapp";
     description: string = "Draw quickly your mind maps";
 
+    version: string;
+
     releases = [{
         os: "Windows 64 bit",
-        link: ""
+        fileName: "mindmapp-windows-64.zip"
     }, {
         os: "Linux 64 bit",
-        link: ""
+        fileName: "mindmapp-linux-64.zip"
     }];
 
     constructor(public githubService: GithubService) {
-        this.githubService.getLastRelease().then(data => {
-            console.log(data);
-        }).catch(error => {
-            console.log(error.json());
+        this.githubService.getLastVersion().then(version => {
+            this.version = version;
         });
     }
 

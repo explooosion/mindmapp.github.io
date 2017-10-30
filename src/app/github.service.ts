@@ -5,13 +5,14 @@ import "rxjs/add/operator/map";
 @Injectable()
 export class GithubService {
 
-    url: string = "https://api.github.com/repos/Mindmapp/mindmapp/releases/latest";
+    url: string = "https://api.github.com/repos/Mindmapp/mindmapp/releases";
 
     constructor(private http: Http) {
     }
 
-    getLastRelease(): Promise<any> {
-        return this.http.get(this.url).map(response => response.json()).toPromise();
+    getLastVersion(): Promise<any> {
+        return this.http.get(this.url).map(response => response.json()).toPromise()
+            .then(data => data[0].name);
     }
 
 }
