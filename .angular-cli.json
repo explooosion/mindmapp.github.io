@@ -16,8 +16,7 @@
       "tsconfig": "tsconfig.app.json",
       "prefix": "app",
       "styles": [
-        "styles.css",
-        "../node_modules/prismjs/themes/prism.css"
+        "styles.scss"
       ],
       "scripts": []
     }
