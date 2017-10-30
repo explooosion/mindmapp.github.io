@@ -1,6 +1,6 @@
 {
   "name": "mindmapp-site",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "Mindmapp site to download the latest release",
   "author": "Omar Desogus <omardesogus9@gmail.com>",
   "homepage": "https://github.com/mindmapp/mindmapp",
@@ -8,7 +8,7 @@
   "scripts": {
     "start": "ng serve",
     "build": "ng build",
-    "gh-pages": "ng build --prod && ngh --message='update site to version 0.9.1'"
+    "gh-pages": "ng build --prod && ngh --message='update site to version 0.9.2'"
   },
   "private": true,
   "dependencies": {
