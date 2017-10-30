@@ -16,6 +16,7 @@ export class AppComponent {
     description: string = "Draw quickly your mind maps";
 
     version: string;
+    status: string = "pre-release";
 
     releases = [{
         os: "Windows 64 bit",
