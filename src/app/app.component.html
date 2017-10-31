@@ -1,22 +1,20 @@
 <div id="download-page">
-    <div id="topleft">
+    <header>
         <img src="./assets/logo.png">
-    </div>
-    <div id="middle">
-        <div>
-            <h1>{{ title }} <span>({{ status }})</span></h1>
-            <img id="map" [src]="mapLink">
-            <p>{{ description }}</p>
-            <hr>
-            <a class="button" *ngFor="let release of releases"
-               [href]="downloadLink + version + '/' + release.fileName" download>
-                <button [disabled]="!version">{{ release.os }}</button>
-            </a>
-        </div>
-    </div>
-    <div id="bottomleft">
-        <a [href]="githubLink" target="_blank">
-            <img src="./assets/github.png">
+    </header>
+    <div id="content">
+        <h1>{{ title }} <span>({{ status }})</span></h1>
+        <img id="map" [src]="mapLink">
+        <p>{{ description }}</p>
+        <hr>
+        <a class="button" *ngFor="let release of releases"
+           [href]="downloadLink + version + '/' + release.fileName" download>
+            <button [disabled]="!version">{{ release.os }}</button>
         </a>
     </div>
 </div>
+<footer>
+    <a [href]="githubLink" target="_blank">
+        <img src="./assets/github.png">
+    </a>
+</footer>
