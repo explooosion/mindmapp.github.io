@@ -24,6 +24,12 @@ export class AppComponent {
     }, {
         os: "Linux 64 bit",
         fileName: "mindmapp-linux-64.zip"
+    },{
+        os: "Windows 32 bit",
+        fileName: "mindmapp-windows-32.zip"
+    }, {
+        os: "Linux 32 bit",
+        fileName: "mindmapp-linux-32.zip"
     }];
 
     constructor(public githubService: GithubService) {
