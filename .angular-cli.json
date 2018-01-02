@@ -1,29 +1,30 @@
 {
-  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "project": {
-    "name": "mindmapp-website"
-  },
-  "apps": [
-    {
-      "root": "src",
-      "outDir": "dist",
-      "assets": [
-        "assets"
-      ],
-      "index": "index.html",
-      "main": "main.ts",
-      "polyfills": "polyfills.ts",
-      "tsconfig": "tsconfig.app.json",
-      "prefix": "app",
-      "styles": [
-        "styles.scss"
-      ],
-      "scripts": []
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "project": {
+        "name": "mindmapp-website"
+    },
+    "apps": [
+        {
+            "root": "src",
+            "outDir": "dist",
+            "assets": [
+                "assets",
+                "CNAME"
+            ],
+            "index": "index.html",
+            "main": "main.ts",
+            "polyfills": "polyfills.ts",
+            "tsconfig": "tsconfig.app.json",
+            "prefix": "app",
+            "styles": [
+                "styles.scss"
+            ],
+            "scripts": []
+        }
+    ],
+    "defaults": {
+        "styleExt": "scss",
+        "component": {
+        }
     }
-  ],
-  "defaults": {
-    "styleExt": "scss",
-    "component": {
-    }
-  }
 }
