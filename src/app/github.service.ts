@@ -1,18 +1,17 @@
 import {Injectable} from "@angular/core";
-import {Http} from "@angular/http";
 import "rxjs/add/operator/map";
+import {HttpClient} from "@angular/common/http";
 
 @Injectable()
 export class GithubService {
 
     url: string = "https://api.github.com/repos/Mindmapp/mindmapp/releases";
 
-    constructor(private http: Http) {
+    constructor(private http: HttpClient) {
     }
 
     getLastVersion(): Promise<any> {
-        return this.http.get(this.url).map(response => response.json()).toPromise()
-            .then(data => data[0].name);
+        return this.http.get(this.url).toPromise().then(data => data[0].name);
     }
 
 }
