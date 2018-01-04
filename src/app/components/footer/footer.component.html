@@ -1,0 +1,16 @@
+<div id="footer">
+    <nav class="navbar fixed-bottom navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" [href]="copyright.link" target="_blank">
+                {{ copyright.name }} {{ author }}
+            </a>
+            <span class="navbar-text">
+                <span *ngFor="let language of languages">
+                    <i (click)="setLanguage(language.code)"
+                       [class]="'flag-icon flag-icon-' + language.icon"
+                       aria-hidden="true"></i>
+                </span>
+            </span>
+        </div>
+    </nav>
+</div>

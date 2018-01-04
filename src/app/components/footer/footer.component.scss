@@ -1,0 +1,22 @@
+div#footer {
+    nav.navbar {
+        background-color: #e9ecef !important;
+
+        a.navbar-brand {
+            font-size: 17px;
+            color: #2c3e50;
+        }
+
+        span.navbar-text {
+            span {
+                opacity: 0.9;
+                cursor: pointer;
+                padding-left: 8px;
+            }
+
+            span:first-child {
+                padding-left: 0;
+            }
+        }
+    }
+}
