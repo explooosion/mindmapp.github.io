@@ -48,12 +48,18 @@ export class AppComponent implements OnInit {
 
     setTranslations() {
         let defaultLanguage = "en",
-            browserLanguage = this.translate.getBrowserLang();
+            storedLanguage = localStorage.getItem("language");
 
-        for (let language of this.languages) {
-            if (language.code === browserLanguage) {
-                defaultLanguage = browserLanguage;
-                break;
+        if (storedLanguage) {
+            defaultLanguage = storedLanguage;
+        } else {
+            let browserLanguage = this.translate.getBrowserLang();
+
+            for (let language of this.languages) {
+                if (language.code === browserLanguage) {
+                    defaultLanguage = browserLanguage;
+                    break;
+                }
             }
         }
 
