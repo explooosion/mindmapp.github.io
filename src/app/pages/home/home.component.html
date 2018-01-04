@@ -1,7 +1,7 @@
 <div id="home">
     <div class="jumbotron text-center">
         <h1 class="display-4">{{ title }}<span>({{ version }}-{{ status | lowercase }})</span></h1>
-        <p class="lead">{{ "DESCRIPTION" | translate }}</p>
+        <p class="lead">{{ "DESCRIPTION" | translate:{title: title} }}</p>
     </div>
     <div class="container text-center">
         <div id="mmp"></div>
