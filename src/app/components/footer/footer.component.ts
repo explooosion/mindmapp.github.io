@@ -8,7 +8,7 @@ import {TranslateService} from "@ngx-translate/core";
 })
 export class FooterComponent implements OnInit {
 
-    @Input() copyright: string;
+    @Input() copyright: any;
     @Input() author: string;
     @Input() languages: string[];
 
