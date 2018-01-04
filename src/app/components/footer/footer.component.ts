@@ -10,7 +10,7 @@ export class FooterComponent implements OnInit {
 
     @Input() copyright: any;
     @Input() author: string;
-    @Input() languages: string[];
+    @Input() languages: any[];
 
     constructor(public translate: TranslateService) {
     }
