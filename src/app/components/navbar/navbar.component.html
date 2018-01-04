@@ -1,0 +1,29 @@
+<div id="navbar">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="">
+                <img src="/assets/images/logo.png" width="30" height="30" class="d-inline-block align-top">
+                {{ title }}
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-text"
+                    aria-controls="navbar-text" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-text">
+                <ul class="navbar-nav mr-auto">
+                    <li *ngFor="let page of pages" class="nav-item" [ngClass]="{'active': page.active}">
+                        <a class="nav-link" [href]="page.link">
+                            {{ page.name }}
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                </ul>
+                <span class="navbar-text">
+                    <a *ngFor="let social of socials" [href]="social.link" target="_blank">
+                        <i [class]="'fa fa-2x fa-' + social.name" aria-hidden="true"></i>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </nav>
+</div>

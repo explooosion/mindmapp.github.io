@@ -1,0 +1,23 @@
+div#navbar {
+    nav.navbar {
+        background-color: #2c3e50 !important;
+
+        span.navbar-text {
+            a {
+                color: transparent;
+
+                i {
+                    color: #ebebeb;
+                    padding-left: 8px;
+                }
+
+                i:hover {
+                    color: white;
+                }
+            }
+            a:first-child > i {
+                padding-left: 0;
+            }
+        }
+    }
+}
