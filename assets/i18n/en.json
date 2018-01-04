@@ -1,0 +1,4 @@
+{
+    "DESCRIPTION": "{{ title }} is a desktop application to draw mind maps quickly and efficiently.",
+    "DOWNLOAD_DESCRIPTION": "Try version {{ version }} and send us your feedback!"
+}
