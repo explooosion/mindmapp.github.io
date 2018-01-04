@@ -1,5 +1,6 @@
 import {Component, OnInit} from "@angular/core";
 import {GithubService} from "../../services/github.service";
+import {MmpService} from "../../services/mmp.service";
 
 @Component({
     selector: "app-home",
@@ -8,37 +9,50 @@ import {GithubService} from "../../services/github.service";
 })
 export class HomeComponent implements OnInit {
 
-    githubLink: string = "https://github.com/Mindmapp";
-    downloadLink: string = "https://github.com/Mindmapp/mindmapp/releases/download/";
-    mapLink: string = "https://raw.githubusercontent.com/Mindmapp/mindmapp/master/src/assets/map.png";
-
     title: string = "Mindmapp";
-    description: string = "Draw quickly your mind maps";
+
+    downloadUrl: string = "https://github.com/Mindmapp/mindmapp/releases/download";
 
     version: string;
-    status: string = "pre-release";
+    status: string;
 
-    releases = [{
-        os: "Windows 64 bit",
-        fileName: "mindmapp-windows-64.zip"
-    }, {
-        os: "Linux 64 bit",
-        fileName: "mindmapp-linux-64.zip"
-    }, {
-        os: "Windows 32 bit",
-        fileName: "mindmapp-windows-32.zip"
-    }, {
-        os: "Linux 32 bit",
-        fileName: "mindmapp-linux-32.zip"
-    }];
+    releases: any;
 
-    constructor(public githubService: GithubService) {
+    constructor(public github: GithubService,
+                public mmp: MmpService) {
     }
 
     ngOnInit() {
-        this.githubService.getLastVersion().then(version => {
+        this.downloadUrl = this.github.getDownloadUrl();
+
+        this.github.getLastVersion().then(version => {
             this.version = version;
         });
+
+        this.mmp.init("mmp", {
+            drag: false
+        });
+
+        this.mmp.getMap("example.mmp").then((data) => {
+            this.mmp.createMap(data);
+        });
+
+        this.status = "Alpha";
+
+        this.releases = {
+            windows: {
+                os: "Windows",
+                architectures: ["32", "64"]
+            },
+            linux: {
+                os: "Linux",
+                architectures: ["32", "64"]
+            }
+        };
+    }
+
+    getPath(os: string, architecture: string) {
+        return `${this.downloadUrl}/${this.version}/mindmapp-${os.toLowerCase()}-${architecture}.zip`;
     }
 
 }

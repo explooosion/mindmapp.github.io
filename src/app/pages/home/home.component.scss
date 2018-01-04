@@ -1,81 +1,44 @@
-#home {
-    #links {
-        z-index: 2;
-        position: absolute;
-        right: 10px;
-        top: 10px;
+div#home {
+    padding-bottom: 60px;
 
-        i {
-            color: #4a4b50;
+    div.jumbotron {
+        margin-bottom: 60px;
+
+        h1>span {
+            font-size: 16px;
         }
     }
 
-    #content {
-        display: table;
-        position: absolute;
-        text-align: center;
-        height: 100%;
-        width: 100%;
-        color: #67707a;
+    div.container {
+        div#mmp {
+            border: 1px solid lightgray;
+            height: 500px;
+            width: 100%;
+            margin: 0 auto;
 
-        >div {
-            display: table-cell;
-            vertical-align: middle;
+            .node {
+                pointer-events: none;
+            }
+        }
 
-            >div {
-                padding: 5px;
-                margin-left: auto;
-                margin-right: auto;
+        div.releases {
+            margin-top: 20px;
 
-                h1 {
-                    margin: 0 0 10px 0;
+            a {
+                margin: 5px;
+                padding: 10px 20px;
+                border: 0;
+                background-color: #2c3e50;
 
-                    img {
-                        position: relative;
-                        top: 15px;
-                    }
-
-                    span {
-                        white-space: nowrap;
-                        font-size: 13px;
-                        font-style: italic;
-                    }
+                i {
+                    padding-right: 5px;
                 }
+            }
 
-                img {
-                    max-width: 100%;
-                }
-
-                hr {
-                    margin: auto;
-                    width: 300px;
-                    border: none;
-                    height: 1px;
-                    background-color: #bfbfbf;
-                }
-
-                a {
-                    text-decoration: none;
-                }
-
-                a > button {
-                    margin-top: 20px;
-                    position: relative;
-                    border-radius: 3px;
-                    background-color: #547394;
-                    border: none;
-                    font-size: 16px;
-                    color: #ffffff;
-                    padding: 8px;
-                    width: 160px;
-                    text-align: center;
-                    -webkit-transition-duration: 0.4s; /* Safari */
-                    transition-duration: 0.4s;
-                    text-decoration: none;
-                    overflow: hidden;
-                    cursor: pointer;
-                }
+            a.btn-primary:focus {
+                box-shadow: none;
             }
         }
     }
+
 }

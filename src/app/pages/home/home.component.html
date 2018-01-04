@@ -1,27 +1,26 @@
 <div id="home">
-
-    <div id="links">
-        <a id="github" [href]="githubLink" target="_blank">
-            <i class="fa fa-github fa-2x" aria-hidden="true"></i>
-        </a>
+    <div class="jumbotron text-center">
+        <h1 class="display-4">{{ title }}<span>({{ version }}-{{ status | lowercase }})</span></h1>
+        <p class="lead">{{ "DESCRIPTION" | translate }}</p>
     </div>
-
-    <div id="content">
-        <div>
-            <div>
-                <h1>
-                    <img src="./assets/logo.png">
-                    {{ title }} <span>({{ status }})</span>
-                </h1>
-                <img id="map" [src]="mapLink">
-                <p>{{ description }}</p>
-                <hr>
-                <a *ngFor="let release of releases"
-                   [href]="downloadLink + version + '/' + release.fileName" download>
-                    <button [disabled]="!version">{{ release.os }}</button>
+    <div class="container text-center">
+        <div id="mmp"></div>
+        <div *ngIf="version" class="releases">
+            <p>{{ "DOWNLOAD_DESCRIPTION" | translate:{version: version.substr(1)} }}</p>
+            <div *ngIf="releases.windows" class="windows">
+                <a *ngFor="let arch of releases.windows.architectures" class="btn btn-primary"
+                   [href]="getPath(releases.windows.os, arch)" download role="button">
+                    <i class="fa fa-windows fa-lg" aria-hidden="true"></i>
+                    {{ releases.windows.os }} {{ arch }}
+                </a>
+            </div>
+            <div *ngIf="releases.linux" class="linux">
+                <a *ngFor="let arch of releases.linux.architectures" class="btn btn-primary"
+                   [href]="getPath(releases.linux.os, arch)" download role="button">
+                    <i class="fa fa-linux fa-lg" aria-hidden="true"></i>
+                    {{ releases.linux.os }} {{ arch }}
                 </a>
             </div>
         </div>
     </div>
-
 </div>
