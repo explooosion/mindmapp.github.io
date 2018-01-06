@@ -10,6 +10,9 @@ import {FooterComponent} from "./components/footer/footer.component";
 import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import {MmpService} from "./services/mmp.service";
+import { ReleasesComponent } from './components/releases/releases.component';
+import { DonateComponent } from './components/donate/donate.component';
+import { MapComponent } from './components/map/map.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http);
@@ -20,7 +23,10 @@ export function HttpLoaderFactory(http: HttpClient) {
         AppComponent,
         HomeComponent,
         NavbarComponent,
-        FooterComponent
+        FooterComponent,
+        ReleasesComponent,
+        DonateComponent,
+        MapComponent
     ],
     imports: [
         BrowserModule,
