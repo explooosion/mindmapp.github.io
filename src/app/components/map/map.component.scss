@@ -1,0 +1,12 @@
+div#map {
+    div#mmp {
+        border: 1px solid lightgray;
+        height: 500px;
+        width: 100%;
+        margin: 0 auto;
+
+        .node {
+            pointer-events: none;
+        }
+    }
+}
