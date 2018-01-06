@@ -23,7 +23,10 @@ export class AppComponent implements OnInit {
         this.title = "Mindmapp";
         this.author = "Omar Desogus";
 
-        this.pages = [];
+        this.pages = [{
+            name: "DOWNLOADS",
+            anchor: "#releases"
+        }];
 
         this.socials = [{
             name: "github",
