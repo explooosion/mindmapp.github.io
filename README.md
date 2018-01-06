@@ -5,6 +5,8 @@
 [![](https://img.shields.io/david/mindmapp/mindmapp.github.io.svg?style=flat-square)](https://david-dm.org/mindmapp/mindmapp.github.io)
 [![](https://img.shields.io/david/dev/mindmapp/mindmapp.github.io.svg?style=flat-square)](https://david-dm.org/mindmapp/mindmapp.github.io?type=dev)
 
+Official mindmapp website.
+
 ## Development
 
 For a faster and more efficient development, some rules are used in the commits and in the branches.
