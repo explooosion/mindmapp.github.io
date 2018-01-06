@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
 
         this.pages = [{
             name: "DOWNLOADS",
-            anchor: "#releases"
+            bookmark: "#releases"
         }];
 
         this.socials = [{

@@ -12,8 +12,8 @@
             <div class="collapse navbar-collapse" id="navbar-text">
                 <ul class="navbar-nav mr-auto">
                     <li *ngFor="let page of pages" class="nav-item" [ngClass]="{'active': page.active}">
-                        <a class="nav-link" [href]="page.link">
-                            {{ page.name }}
+                        <a class="nav-link" [href]="page.link" (click)="slide(page.bookmark, $event)">
+                            {{ page.name | translate }}
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>

@@ -17,4 +17,14 @@ export class NavbarComponent implements OnInit {
     ngOnInit() {
     }
 
+    slide(bookmark: string, event: Event) {
+        if (bookmark) {
+            event.preventDefault();
+
+            window.document.querySelector(bookmark).scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+    }
+
 }
