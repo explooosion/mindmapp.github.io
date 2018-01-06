@@ -1,0 +1,21 @@
+<div *ngIf="version" id="releases" class="mb-4">
+    <h2><i class="fa fa-download pr-3" aria-hidden="true"></i>{{ "DOWNLOADS" | translate }}</h2>
+    <hr class="my-2">
+    <div class="p-2">
+        <p>{{ "DOWNLOADS_DESCRIPTION" | translate:{version: version.substr(1)} }}</p>
+        <div *ngIf="releases.windows" class="windows">
+            <a *ngFor="let arch of releases.windows.architectures" class="btn btn-primary mr-2 mb-2"
+               [href]="getPath(releases.windows.os, arch)" download role="button">
+                <i class="fa fa-windows fa-lg pr-2" aria-hidden="true"></i>
+                {{ releases.windows.os }} {{ arch }}
+            </a>
+        </div>
+        <div *ngIf="releases.linux" class="linux">
+            <a *ngFor="let arch of releases.linux.architectures" class="btn btn-primary mr-2 mb-2"
+               [href]="getPath(releases.linux.os, arch)" download role="button">
+                <i class="fa fa-linux fa-lg pr-2" aria-hidden="true"></i>
+                {{ releases.linux.os }} {{ arch }}
+            </a>
+        </div>
+    </div>
+</div>
