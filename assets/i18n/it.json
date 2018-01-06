@@ -1,4 +1,16 @@
 {
     "DESCRIPTION": "{{ title }} è un'applicazione desktop per disegnare mappe mentali in modo rapido ed efficiente.",
-    "DOWNLOAD_DESCRIPTION": "Prova la versione {{ version }} e mandaci il tuo feedback!"
+    "DOWNLOADS": "Downloads",
+    "DOWNLOADS_DESCRIPTION": "Prova la versione {{ version }} e mandaci il tuo feedback!",
+    "DONATE": "Donazioni",
+    "DONATE_DESCRIPTION": "Dona per supportare lo sviluppo.",
+    "HOW_IT_WORKS": {
+        "TITLE": "Come funziona",
+        "DESCRIPTION": "Mindmapp nasce con l'intento di rendere la creazione di mappe estremamente semplice, mantenendo però le proprietà fondamentali che rendono le mappe mentali così efficienti",
+        "COLORS": "Colori",
+        "IMAGES": "Immagini",
+        "NEURAL_BRANCHES": "Rami neurali",
+        "HIERARCHICAL_STRUCTURE": "Struttura gerarchica",
+        "RADIAL_GEOMETRY": "Geometria radiale"
+    }
 }
