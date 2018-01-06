@@ -1,0 +1,11 @@
+<div id="donate" class="mb-4">
+    <h2><i class="fa fa-heartbeat pr-3" aria-hidden="true"></i>{{ "DONATE" | translate }}</h2>
+    <hr class="my-2">
+    <div class="p-2">
+        <p>{{ "DONATE_DESCRIPTION" | translate }}</p>
+        <p class="mb-0 service">
+            Ethereum:
+            <a [href]="'https://etherscan.io/address/' + ethereumWallet" target="_blank">{{ ethereumWallet }}</a>
+        </p>
+    </div>
+</div>
