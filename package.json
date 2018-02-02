@@ -21,6 +21,7 @@
         "@angular/router": "5.1.2",
         "@ngx-translate/core": "9.0.2",
         "@ngx-translate/http-loader": "2.0.1",
+        "angular-particle": "1.0.4",
         "core-js": "2.4.1",
         "flag-icon-css": "2.9.0",
         "font-awesome": "4.7.0",
