@@ -13,10 +13,12 @@ export class HomeComponent implements OnInit {
     version: string;
     status: string;
 
-    myStyle: object = {};
-    myParams: object = {};
-    width: number = 100;
-    height: number = 100;
+    particles = {
+        style: {},
+        parameters: {},
+        width: 100,
+        height: 100
+    };
 
     constructor(public github: GithubService) {
     }
@@ -28,8 +30,7 @@ export class HomeComponent implements OnInit {
 
         this.status = "Alpha";
 
-
-        this.myStyle = {
+        this.particles.style = {
             "position": "fixed",
             "width": "100%",
             "height": "100%",
@@ -40,7 +41,7 @@ export class HomeComponent implements OnInit {
             "bottom": 0,
         };
 
-        this.myParams = {
+        this.particles.parameters = {
             "particles": {
                 "number": {
                     "value": 80,
