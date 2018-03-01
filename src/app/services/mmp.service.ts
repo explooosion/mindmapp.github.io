@@ -5,21 +5,25 @@ import * as mmp from "mmp";
 @Injectable()
 export class MmpService {
 
-    url: string = "./assets/data";
+    readonly url: string = "./assets/data";
+
+    map: any;
 
     constructor(private http: HttpClient) {
     }
 
-    init(id: string, options?: any) {
-        mmp.init(id, options);
+    create(id: string, options?: any) {
+        this.map = mmp.create(id, options);
     }
 
-    getMap(name: string): Promise<any> {
+    addNewMap(data: string) {
+        this.getData(data).then((data) => {
+            this.map.new(data);
+        });
+    }
+
+    private getData(name: string): Promise<any> {
         return this.http.get(`${this.url}/${name}`).toPromise();
-    }
-
-    createMap(data: any) {
-        mmp.data(data);
     }
 
 }

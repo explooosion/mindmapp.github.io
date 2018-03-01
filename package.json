@@ -25,7 +25,7 @@
         "core-js": "2.5.3",
         "flag-icon-css": "2.9.0",
         "font-awesome": "4.7.0",
-        "mmp": "0.1.7",
+        "mmp": "0.2.2",
         "rxjs": "5.5.6",
         "zone.js": "0.8.19"
     },

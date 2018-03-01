@@ -12,14 +12,8 @@ export class MapComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.mmp.init("mmp", {
-            "drag": false,
-            "center-onresize": false
-        });
-
-        this.mmp.getMap("example.mmp").then((data) => {
-            this.mmp.createMap(data);
-        });
+        this.mmp.create("mmp");
+        this.mmp.addNewMap("example.mmp");
     }
 
 }
