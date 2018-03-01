@@ -7,7 +7,8 @@
     "license": "MIT",
     "scripts": {
         "start": "ng serve",
-        "build": "ng build --prod && ngh --branch master"
+        "build": "ng build --prod",
+        "release": "npm run build && ngh --branch master"
     },
     "private": true,
     "dependencies": {
