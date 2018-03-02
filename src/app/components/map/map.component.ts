@@ -8,11 +8,18 @@ import {MmpService} from "../../services/mmp.service";
 })
 export class MapComponent implements OnInit {
 
+    map: any;
+
     constructor(public mmp: MmpService) {
     }
 
     ngOnInit() {
-        this.mmp.create("mmp");
+        this.mmp.create("mmp", {
+            centerOnResize: false
+        });
+
+        this.map = this.mmp.getMapInstance();
+
         this.mmp.addNewMap("example.mmp");
     }
 

@@ -1,12 +1,30 @@
 div#map {
     div#mmp {
-        border: 1px solid lightgray;
+        box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         height: 500px;
         width: 100%;
         margin: 0 auto;
 
         .node {
             pointer-events: none;
+        }
+    }
+
+    #commands {
+        position: absolute;
+        padding-left: 20px;
+        cursor: pointer;
+        bottom: 0;
+        left: 0;
+
+        i {
+            padding: 0 0 10px 5px;
+            color: #828282;
+            user-select: none;
+        }
+
+        i:hover {
+            color: #727272;
         }
     }
 }

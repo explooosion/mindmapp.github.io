@@ -7,7 +7,7 @@ export class MmpService {
 
     readonly url: string = "./assets/data";
 
-    map: any;
+    private map: any;
 
     constructor(private http: HttpClient) {
     }
@@ -16,10 +16,14 @@ export class MmpService {
         this.map = mmp.create(id, options);
     }
 
-    addNewMap(data: string) {
-        this.getData(data).then((data) => {
+    addNewMap(data: string): Promise<any> {
+        return this.getData(data).then((data) => {
             this.map.new(data);
         });
+    }
+
+    getMapInstance(): any {
+        return this.map;
     }
 
     private getData(name: string): Promise<any> {

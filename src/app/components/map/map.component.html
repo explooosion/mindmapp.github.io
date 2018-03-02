@@ -13,5 +13,19 @@
             </ul>
         </div>
     </div>
-    <div class="col-xl-7 mx-3" id="mmp"></div>
+    <div class="col-xl-7 mx-3">
+        <div id="mmp"></div>
+        <div id="commands">
+            <i (click)="map.addNode()"
+               class="fa fa-plus fa-lg" aria-hidden="true"></i>
+            <i (click)="map.removeNode()"
+               class="fa fa-minus fa-lg" aria-hidden="true"></i>
+            <i (click)="map.zoomIn()"
+               class="fa fa-search-plus fa-lg" aria-hidden="true"></i>
+            <i (click)="map.zoomOut()"
+               class="fa fa-search-minus fa-lg" aria-hidden="true"></i>
+            <i (click)="map.center()"
+               class="fa fa-arrows fa-lg" aria-hidden="true"></i>
+        </div>
+    </div>
 </div>
