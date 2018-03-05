@@ -15,7 +15,11 @@
     </div>
     <div class="col-xl-7 mx-3">
         <div id="mmp"></div>
-        <div id="commands">
+        <i (click)="toggleMapLock()" id="lock-unlock-map"
+           class="fa fa-{{ locked ? 'lock' : 'unlock' }} fa-lg"
+           aria-hidden="true"></i>
+        <div [class]="locked ? 'obscure-map' : ''"></div>
+        <div id="mmp-commands">
             <i (click)="map.addNode()"
                class="fa fa-plus fa-lg" aria-hidden="true"></i>
             <i (click)="map.removeNode()"
@@ -26,6 +30,12 @@
                class="fa fa-search-minus fa-lg" aria-hidden="true"></i>
             <i (click)="map.center()"
                class="fa fa-arrows fa-lg" aria-hidden="true"></i>
+            <i (click)="map.new()"
+               class="fa fa-file-o fa-lg" aria-hidden="true"></i>
+            <i (click)="map.undo()"
+               class="fa fa-undo fa-lg" aria-hidden="true"></i>
+            <i (click)="map.redo()"
+               class="fa fa-repeat fa-lg" aria-hidden="true"></i>
         </div>
     </div>
 </div>

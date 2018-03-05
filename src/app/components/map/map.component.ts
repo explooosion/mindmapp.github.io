@@ -9,6 +9,7 @@ import {MmpService} from "../../services/mmp.service";
 export class MapComponent implements OnInit {
 
     map: any;
+    locked: boolean = true;
 
     constructor(public mmp: MmpService) {
     }
@@ -21,6 +22,10 @@ export class MapComponent implements OnInit {
         this.map = this.mmp.getMapInstance();
 
         this.mmp.addNewMap("example.mmp");
+    }
+
+    toggleMapLock() {
+        this.locked = !this.locked;
     }
 
 }

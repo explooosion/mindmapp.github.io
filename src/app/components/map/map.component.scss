@@ -10,17 +10,47 @@ div#map {
         }
     }
 
-    #commands {
+    i#lock-unlock-map {
+        z-index: 4;
         position: absolute;
-        padding-left: 20px;
+        color: #666666;
+        user-select: none;
+        padding: 5px;
+        cursor: pointer;
+        top: 5px;
+        left: 20px;
+    }
+
+    div.obscure-map {
+        z-index: 3;
+        position: absolute;
+        left: 15px;
+        top: 0;
+        height: 100%;
+        width: -webkit-calc(100% - 30px);
+        width:    -moz-calc(100% - 30px);
+        width:         calc(100% - 30px);
+        background-color: #dbdbdb;
+        opacity: .4;
+    }
+
+    div#mmp-commands {
+        position: absolute;
+        background-color: white;
+        padding: 5px 15px;
+        margin-left: 15px;
         cursor: pointer;
         bottom: 0;
         left: 0;
 
         i {
-            padding: 0 0 10px 5px;
+            padding-right: 5px;
             color: #828282;
             user-select: none;
+        }
+
+        i:last-child {
+            padding-right: 0;
         }
 
         i:hover {
