@@ -9,13 +9,13 @@ Official mindmapp website.
 
 ## Development
 
-For a faster and more efficient development, some rules are used in the commits and in the branches.
+For a faster and more efficient development, some rules are used in the commits, in the branches and in the ECMAScript 2015 syntax.
 
 ### # commits
 
 * Use this commit message format (angular style):  
 
-    `[<type>] <subject>`
+    `[<type>]: <subject>`
     `<BLANK LINE>`
     `<body>`
 
@@ -28,6 +28,7 @@ For a faster and more efficient development, some rules are used in the commits 
     - refactor: A code change that neither fixes a bug nor adds a feature
     - test: Adding missing or correcting existing tests
     - chore: Changes to the build process or auxiliary tools and libraries such as documentation generation
+    - update: Update of the library version or of the dependencies
 
 and `body` must be should include the motivation for the change and contrast this with previous behavior (do not add body if the commit is trivial). 
 
@@ -53,10 +54,16 @@ Examples:
     git branch -b feat/side-bar
     git branch -b style/header
 
+### # es2015
+
+* Use `let` and `const`, not `var`.
+* Use Arrow Functions in place of function expressions when possible.
+* Use Arrow Functions whenever you need to preserve the lexical value of this.
+
 ## License
 * See [LICENSE](https://github.com/Mindmapp/mindmapp.github.io/blob/dev/LICENSE) file
 
-## Contact
+## Contacts
 #### Developer
 * e-mail : omardesogus9@gmail.com
 * github : [@cedoor](https://github.com/cedoor)
