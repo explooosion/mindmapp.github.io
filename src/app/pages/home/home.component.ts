@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
             this.version = version;
         });
 
-        this.status = "Alpha";
+        this.status = "Beta";
 
         this.particles.style = {
             "position": "fixed",
