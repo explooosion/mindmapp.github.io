@@ -7,13 +7,15 @@ import {Component, OnInit} from "@angular/core";
 })
 export class DonateComponent implements OnInit {
 
-    ethereumWallet: string;
+    public ethereumWallet: string;
+    public paypalLink: string;
 
     constructor() {
     }
 
     ngOnInit() {
         this.ethereumWallet = "0x03Ed9bE36c5FC315B0559Cf344801653e2CE292f";
+        this.paypalLink = "https://paypal.me/Mindmapp";
     }
 
 }
