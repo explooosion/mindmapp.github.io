@@ -2,6 +2,12 @@
     <div class="jumbotron text-center">
         <h1 class="display-4">{{ title }}<span>({{ version }}-{{ status | lowercase }})</span></h1>
         <p class="lead">{{ "DESCRIPTION" | translate:{title: title} }}</p>
+        <a class="github-button" href="https://github.com/Mindmapp/mindmapp"
+           data-icon="octicon-star"
+           data-size="large" aria-label="Star Mindmapp/mindmapp on GitHub">Star</a>
+        <a class="github-button" href="https://github.com/Mindmapp/mindmapp/fork"
+           data-icon="octicon-repo-forked"
+           data-size="large" aria-label="Fork Mindmapp/mindmapp on GitHub">Fork</a>
     </div>
     <div class="container">
         <app-map></app-map>
