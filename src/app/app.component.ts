@@ -34,7 +34,7 @@ export class AppComponent implements OnInit {
         }];
 
         this.copyright = {
-            name: "Copyright (c) 2017",
+            name: "Copyright (c) 2018",
             link: "https://github.com/Mindmapp/mindmapp/blob/master/LICENSE.md"
         };
 
