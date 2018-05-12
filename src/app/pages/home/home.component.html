@@ -1,6 +1,6 @@
 <div id="home">
     <div class="jumbotron text-center">
-        <h1 class="display-4">{{ title }}<span>({{ version }}-{{ status | lowercase }})</span></h1>
+        <h1 class="display-4">{{ title }}<span>({{ release?.name }}-{{ status | lowercase }})</span></h1>
         <p class="lead">{{ "DESCRIPTION" | translate:{title: title} }}</p>
         <a class="github-button" href="https://github.com/Mindmapp/mindmapp"
            data-icon="octicon-star"
@@ -11,7 +11,7 @@
     </div>
     <div class="container">
         <app-map></app-map>
-        <app-releases [version]="version"></app-releases>
+        <app-releases [release]="release"></app-releases>
         <app-donate></app-donate>
     </div>
 </div>

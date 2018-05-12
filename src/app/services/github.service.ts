@@ -4,18 +4,14 @@ import {HttpClient} from "@angular/common/http";
 @Injectable()
 export class GithubService {
 
-    private readonly releaseUrl: string = "https://api.github.com/repos/Mindmapp/mindmapp/releases";
-    private readonly downloadLink: string = "https://github.com/Mindmapp/mindmapp/releases/download";
+    private readonly url: string = "https://api.github.com/repos/Mindmapp/mindmapp/";
 
     constructor(private http: HttpClient) {
     }
 
-    getLastVersion(): Promise<any> {
-        return this.http.get(this.releaseUrl).toPromise().then(data => data[0].name);
-    }
-
-    getDownloadUrl() {
-        return this.downloadLink;
+    getLatestRelease(): Promise<any> {
+        let endpoint = "releases/latest";
+        return this.http.get(this.url + endpoint).toPromise();
     }
 
 }

@@ -10,7 +10,8 @@ export class HomeComponent implements OnInit {
 
     title: string = "Mindmapp";
 
-    version: string;
+    release: any;
+
     status: string;
 
     particles = {
@@ -24,8 +25,8 @@ export class HomeComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.github.getLastVersion().then(version => {
-            this.version = version;
+        this.github.getLatestRelease().then((release) => {
+            this.release = release;
         });
 
         this.status = "Beta";
