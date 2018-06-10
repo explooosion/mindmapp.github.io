@@ -1,16 +1,19 @@
 <div id="home">
     <div class="jumbotron text-center">
         <h1 class="display-4">{{ title }}<span>({{ release?.name }}-{{ status | lowercase }})</span></h1>
+        <img class="img-fluid mb-4 mt-3"
+             src="https://raw.githubusercontent.com/Mindmapp/mindmapp/master/src/assets/images/example.png">
         <p class="lead">{{ "DESCRIPTION" | translate:{title: title} }}</p>
         <a class="github-button" href="https://github.com/Mindmapp/mindmapp"
            data-icon="octicon-star"
            data-size="large" aria-label="Star Mindmapp/mindmapp on GitHub">Star</a>
+        <div style="display: inline-block; width: 5px"></div>
         <a class="github-button" href="https://github.com/Mindmapp/mindmapp/fork"
            data-icon="octicon-repo-forked"
            data-size="large" aria-label="Fork Mindmapp/mindmapp on GitHub">Fork</a>
     </div>
     <div class="container">
-        <app-map></app-map>
+        <app-info></app-info>
         <app-releases [release]="release"></app-releases>
         <app-donate></app-donate>
     </div>

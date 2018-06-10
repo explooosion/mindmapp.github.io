@@ -18,5 +18,13 @@ div#home {
         p {
             font-size: 20px;
         }
+
+        iframe {
+            margin: 0 5px;
+        }
+
+        img {
+            border: 1px solid rgba(0, 0, 0, .1);
+        }
     }
 }
