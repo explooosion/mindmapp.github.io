@@ -13,7 +13,6 @@ import {MmpService} from "./services/mmp.service";
 import {ReleasesComponent} from "./components/releases/releases.component";
 import {DonateComponent} from "./components/donate/donate.component";
 import {MapComponent} from "./components/map/map.component";
-import {ParticlesModule} from "angular-particle";
 
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http);
@@ -39,8 +38,7 @@ export function HttpLoaderFactory(http: HttpClient) {
                 deps: [HttpClient]
             }
         }),
-        AppRoutingModule,
-        ParticlesModule
+        AppRoutingModule
     ],
     providers: [
         GithubService,
