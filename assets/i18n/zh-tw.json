@@ -1,0 +1,16 @@
+{
+    "DESCRIPTION": "{{ title }} 是一個桌面應用程式，可快速且有效率地繪製心智圖。",
+    "DOWNLOADS": "下載",
+    "DOWNLOADS_DESCRIPTION": "最新 {{ version }} 版本，也歡迎給我們回饋意見！",
+    "DONATE": "贊助",
+    "DONATE_DESCRIPTION": "歡迎贊助我們以支持開發。",
+    "HOW_IT_WORKS": {
+        "TITLE": "如何運作",
+        "DESCRIPTION": "創立 Mindmapp 的初衷，是希望透過最簡單的元素、未被加工過的圖形，讓使用者在建立新智圖時，能夠快速、簡便的製作完成",
+        "COLORS": "顏色",
+        "IMAGES": "圖片",
+        "NEURAL_BRANCHES": "神經分支",
+        "HIERARCHICAL_STRUCTURE": "層次結構",
+        "RADIAL_GEOMETRY": "徑向幾何"
+    }
+}
