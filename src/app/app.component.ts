@@ -44,6 +44,9 @@ export class AppComponent implements OnInit {
         }, {
             code: "en",
             icon: "gb"
+        }, {
+            code: "zh-tw",
+            icon: "tw"
         }];
 
         this.setTranslations();
