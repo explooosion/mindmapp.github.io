@@ -31,6 +31,9 @@ export class AppComponent implements OnInit {
         this.socials = [{
             name: "github",
             link: "https://github.com/Mindmapp"
+        }, {
+            name: "slack",
+            link: "https://join.slack.com/t/mindmapp-org/shared_invite/enQtNDE4OTUwOTQ4OTc3LWRkZDExM2E5MTJlNzZhZDBjZTFhMzVjMDhjMDFhOTY0NjBkMzMwYjRiY2FmNWNiNjRiYzdhZmNjZDE4YzkwYjk"
         }];
 
         this.copyright = {
